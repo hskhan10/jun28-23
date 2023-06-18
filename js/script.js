@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const imageUrls = [
       'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg',
       'https://www.nationsonline.org/gallery/USA/LOVE-Park-Philadelphia.jpg',
-      'https://w0.peakpx.com/wallpaper/418/810/HD-wallpaper-badshahi-mosque-galaxy-gmhamad1-iphone-lahore-mughal-architecture-samsung-walled-city-thumbnail.jpg',
+      'https://i.ibb.co/64wZ69h/isloo1.jpg',
       'https://i.ibb.co/596rD8n/spain-shadow.jpg'
       // Add more image URLs here
     ];
