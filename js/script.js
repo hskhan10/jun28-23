@@ -11,8 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const imageUrls = [
       'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg',
       'https://www.nationsonline.org/gallery/USA/LOVE-Park-Philadelphia.jpg',
-      'https://i.ibb.co/64wZ69h/isloo1.jpg',
-      'https://i.ibb.co/596rD8n/spain-shadow.jpg'
+      'https://jun28-23.s3.ap-south-1.amazonaws.com/isloo1.jpeg',
+      'https://jun28-23.s3.ap-south-1.amazonaws.com/spain_shadow.jpeg'
       // Add more image URLs here
     ];
 
