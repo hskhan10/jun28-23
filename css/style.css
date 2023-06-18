@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Allura';
+  src: url('../fonts/Allura-Regular.ttf') format('truetype');
+}
+
+.allura-font {
+  font-family: 'Allura', cursive;
+}
+
 body {
   background-image: url('https://i.ibb.co/0cWkQyv/heart-bg.png');
   background-repeat: no-repeat;
