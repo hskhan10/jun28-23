@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
       'The time we went to philly love park and had a random lady take our picture!',
       'Enjoying birthdays in philly',
       'Touring the space needle - new and cool!',
-      // Add more captions here
+      'Adding a new caption here for testing!'
     ];
 
     const randomIndex = Math.floor(Math.random() * captions.length);
