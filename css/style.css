@@ -14,6 +14,7 @@ body {
   background-position: top center;
   background-attachment: local;
   background-size: 100% auto;
+  background-color: #ececec;
 }
 
 .grid-container {
