@@ -3,10 +3,21 @@
   src: url('../fonts/Allura-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Lofty';
+  src: url('../fonts/LoftygoalsRegular.otf') format('truetype');
+}
+
 .allura-font {
   text-align: center;
   text-align-last:center;
   font-family: 'Allura', cursive;
+}
+
+.lofty-font {
+  text-align: center;
+  text-align-last:center;
+  font-family: 'Lofty';
 }
 
 body {
@@ -72,4 +83,11 @@ body {
   padding: 5px;
   font-size: 15px;
   text-align: center;
+}
+
+.spotify-player {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
 }
