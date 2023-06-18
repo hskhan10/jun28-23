@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Replace this array with your own image URLs
     const imageUrls = [
       'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg',
-      'https://e1.pxfuel.com/desktop-wallpaper/789/442/desktop-wallpaper-philadelphia-iphone-philadelphia-skyline-iphone-thumbnail.jpg',
+      'https://www.nationsonline.org/gallery/USA/LOVE-Park-Philadelphia.jpg',
       'https://w0.peakpx.com/wallpaper/418/810/HD-wallpaper-badshahi-mosque-galaxy-gmhamad1-iphone-lahore-mughal-architecture-samsung-walled-city-thumbnail.jpg',
       // Add more image URLs here
     ];
