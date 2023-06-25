@@ -143,7 +143,7 @@ window.addEventListener('DOMContentLoaded', () => {
       
       // Show popover on grid item click
       gridItem.addEventListener('click', () => {
-        const caption = getRandomCaption(i);
+        const caption = getRandomCaption();
         popoverImage.src = getRandomImageUrl(i);
         popoverCaption.textContent = caption;
         popoverOverlay.style.display = 'flex';
