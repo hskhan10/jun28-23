@@ -96,22 +96,22 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function getRandomSeattleImage() {
-    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+    const randomIndex = Math.floor(Math.random() * imageUrlsSeattle.length);
     return imageUrlsSeattle[randomIndex];
   }
 
   function getRandomPhillyImage() {
-    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+    const randomIndex = Math.floor(Math.random() * imageUrlsPhilly.length);
     return imageUrlsPhilly[randomIndex];
   }
 
   function getRandomSpainImage() {
-    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+    const randomIndex = Math.floor(Math.random() * imageUrlsSpain.length);
     return imageUrlsSpain[randomIndex];
   }
 
   function getRandomLahoreImage() {
-    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+    const randomIndex = Math.floor(Math.random() * imageUrlsLahore.length);
     return imageUrlsLahore[randomIndex];
   }
 
