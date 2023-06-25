@@ -4,109 +4,153 @@ window.addEventListener('DOMContentLoaded', () => {
   const popoverImage = document.querySelector('.popover-image');
   const popoverCaption = document.querySelector('.popover-caption');
 
-  const heartGif = 'https://cdnb.artstation.com/p/assets/images/images/016/235/721/original/christopher-haugen-heart-rotate4.gif';
+  const HEART_URL = 'https://cdnb.artstation.com/p/assets/images/images/016/235/721/original/christopher-haugen-heart-rotate4.gif';
   
-  const testArray = [
-      {
-        imageUrl: 'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg', 
-        caption: 'This is a caption for iphone needle!'
-      },
-      {
-        imageUrl: 'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg', 
-        caption: 'Completely random caption though!'
-      }
-    ];
+  const MAX_GRID_ITEMS = 30;
+  const SEATTLE_INDEX = 7;
+  const LAHORE_INDEX = 10;
+  const SPAIN_INDEX = 15;
+  const PHILLY_INDEX = 20;
 
   const imageUrlsSeattle = [
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-1-needle.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-2-pike.JPG',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-3-coffee.heic'
-    ];
-
-  const captionsSeattle = [
-      'First visit to space needle. The early days!',
-      'Pike place market - a special day :)',
-      'Bellevue coffee days'
-    ];
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-1-needle.HEIC', 
+        caption: 'First visit to space needle. The early days!'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-2-pike.JPG', 
+        caption: 'Pike place market - a special day :)'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-3-coffee.heic', 
+        caption: 'Bellevue coffee days'
+      }      
+  ];
 
   const imageUrlsPhilly = [
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-1-sister-cities.JPG',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-2-bday.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-3-funny-park.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-4-hassan-bday.heic',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-5-sana-scheming.JPG',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-6-dillworth.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-7-snowy-cap.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-8-theater-funny.HEIC'
-    ];
-
-  const captionsPhilly = [
-      'Golden hour at sister cities park!',
-      'Celebrating bdays! September :)',
-      'Hehe funnny park',
-      'May birthdays :)',
-      'Sana scheming',
-      'Dilworth winter nights!',
-      'Snow cap!',
-      'Alone in theater.'
-    ];
-
-  const imageUrlsSpain = [
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-1-fountain.jpg.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-2-beach.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-3-cute-2.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-4-wedding-stand.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-5-shadow.jpeg'
-    ];
-
-  const captionsSpain = [
-      'Beautiful fountain and reunion in Spain :)',
-      'Beach days',
-      'Spain cute 2',
-      'Couple photoshoot in Denia :)',
-      'Seville <3'
-    ];
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-1-sister-cities.JPG', 
+        caption: 'Golden hour at sister cities park!'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-2-bday.HEIC', 
+        caption: 'Celebrating bdays! September :)'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-3-funny-park.HEIC', 
+        caption: 'Hehe funnny park'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-4-hassan-bday.heic', 
+        caption: 'May birthdays :)'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-5-sana-scheming.JPG', 
+        caption: '...'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-6-dillworth.HEIC', 
+        caption: 'Dilworth winter nights!'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-7-snowy-cap.HEIC', 
+        caption: 'Snow cap!'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-8-theater-funny.HEIC', 
+        caption: 'Alone in theater.'
+      }
+  ];
 
   const imageUrlsLahore = [
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-nikkah-1.JPG',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-nikkah-2.JPG',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-1-spice-bazaar.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-2-family-jt.JPG',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-3-last-eid.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-4-roof-funny.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-5-coco-funny.JPG',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-6-isloo-bus.JPG',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-7-isloo-2.HEIC',
-      'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-8-plane.HEIC'
-    ];
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-nikkah-1.JPG', 
+        caption: 'Nikkah - June 28, 2022'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-nikkah-2.JPG', 
+        caption: 'Nikkah cute hands picture :)'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-1-spice-bazaar.HEIC', 
+        caption: 'Dining out - Spice Bazaar. Our first dinner after officially being nikkah-fied'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-2-family-jt.JPG', 
+        caption: '5 star hotel. Nice movie nights. Great experience!'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-3-last-eid.HEIC', 
+        caption: 'Eid 2022! First eid together.'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-4-roof-funny.HEIC', 
+        caption: 'Hehe'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-5-coco-funny.JPG', 
+        caption: 'Just coco cubano things!'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-6-isloo-bus.JPG', 
+        caption: 'Enroute islamabad!'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-7-isloo-2.HEIC', 
+        caption: 'Enjoying isloo'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-8-plane.HEIC', 
+        caption: 'Flying into Lahore'
+      }      
+  ];
 
-  const captionsLahore = [
-      'Our nikkah',
-      'Nikkah cute hands picture :)',
-      'Dining out - Spice Bazaar. Our first dinner after officially being nikkah-fied',
-      '5 star hotel. Nice movie nights. Great experience!',
-      'Eid 2022!',
-      'Hehe',
-      'Just coco cubano things!',
-      'Enroute islamabad!',
-      'Enjoying isloo',
-      'Flying into Lahore'
-    ];
+  const imageUrlsSpain = [
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-1-fountain.jpg.HEIC', 
+        caption: 'Beautiful reunion in Spain :)'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-2-beach.HEIC', 
+        caption: 'Beach days'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-3-cute-2.HEIC', 
+        caption: 'Spain cute 2'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-4-wedding-stand.HEIC', 
+        caption: 'Couple photoshoot in Denia :)'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-5-shadow.jpeg', 
+        caption: 'Seville <3'
+      },
+      {
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-5-shadow.jpeg', 
+        caption: 'TBD'
+      } 
+  ];
 
-  // Function to generate a random image URL
-  function getRandomImageUrl(index) {
-      if (index === 7) {
+  const DEFAULT_IMAGE = 
+      {
+          imageUrl: 'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg', 
+          caption: 'This is a default caption for iphone needle!'
+      };
+
+  // Function to generate a random image given the city index
+  function getImageForCity(index) {
+      if (index === SEATTLE_INDEX) {
         return getRandomSeattleImage();
-      } else if (index === 10) {
+      } else if (index === LAHORE_INDEX) {
         return getRandomLahoreImage();
-      } else if (index === 15) {
+      } else if (index === SPAIN_INDEX) {
         return getRandomSpainImage();
-      } else if (index === 20) {
+      } else if (index === PHILLY_INDEX) {
         return getRandomPhillyImage();
       }
 
-      // Default to iphone image
-      return 'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg';
+      return DEFAULT_IMAGE; 
   }
 
   function getRandomSeattleImage() {
@@ -129,17 +173,6 @@ window.addEventListener('DOMContentLoaded', () => {
     return imageUrlsLahore[randomIndex];
   }
 
-  function getRandomTestImage() {
-    const randomIndex = Math.floor(Math.random() * testArray.length);
-    return testArray[randomIndex];
-  }
-
-  // Function to generate a random English caption
-  function getRandomCaption() {
-    const randomIndex = Math.floor(Math.random() * captionsPhilly.length);
-    return captionsPhilly[randomIndex];
-  }
-
   function showImagePopover(gridItem) {
     // Show popover on grid item click
     gridItem.addEventListener('click', () => {
@@ -150,34 +183,20 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // Create grid items and set random images
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < MAX_GRID_ITEMS; i++) {
     const gridItem = document.createElement('div');
     gridItem.classList.add('grid-item');
     gridContainer.appendChild(gridItem);
 
-    if (i === 7 || i === 10 || i === 15 || i === 20) {
-      gridItem.style.backgroundImage = `url(${heartGif})`;
+    if (i === SEATTLE_INDEX || i === LAHORE_INDEX || i === PHILLY_INDEX || i === SPAIN_INDEX) {
+      gridItem.style.backgroundImage = `url(${HEART_URL})`;
       gridItem.style.cursor = 'pointer';
       
       // Show popover on grid item click
       gridItem.addEventListener('click', () => {
-        const caption = getRandomCaption();
-        popoverImage.src = getRandomImageUrl(i);
-        popoverCaption.textContent = caption;
-        popoverOverlay.style.display = 'flex';
-      });
-    }
-
-    // Experimental
-    if (i === 8) {
-      gridItem.style.backgroundImage = `url(${heartGif})`;
-      gridItem.style.cursor = 'pointer';
-      
-      // Show popover on grid item click
-      gridItem.addEventListener('click', () => {
-        const imageObj = getRandomTestImage();
-        popoverImage.src = imageObj.imageUrl;
-        popoverCaption.textContent = imageObj.caption;
+        const image = getImageForCity(i);
+        popoverImage.src = image.imageUrl;
+        popoverCaption.textContent = image.caption;
         popoverOverlay.style.display = 'flex';
       });
     }
