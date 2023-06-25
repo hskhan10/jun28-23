@@ -5,6 +5,18 @@ window.addEventListener('DOMContentLoaded', () => {
   const popoverCaption = document.querySelector('.popover-caption');
 
   const heartGif = 'https://cdnb.artstation.com/p/assets/images/images/016/235/721/original/christopher-haugen-heart-rotate4.gif';
+  
+  const testArray = [
+      {
+        imageUrl: 'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg', 
+        caption: 'This is a caption for iphone needle!'
+      },
+      {
+        imageUrl: 'https://e0.pxfuel.com/wallpapers/48/404/desktop-wallpaper-iphone-seattle-washington-thumbnail.jpg', 
+        caption: 'Completely random caption though!'
+      }
+    ];
+
   const imageUrlsSeattle = [
       'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-1-needle.HEIC',
       'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-2-pike.JPG',
@@ -89,6 +101,8 @@ window.addEventListener('DOMContentLoaded', () => {
         return getRandomLahoreImage();
       } else if (index === 15) {
         return getRandomSpainImage();
+      } else if (index === 20) {
+        return getRandomPhillyImage();
       }
 
       // Default to iphone image
@@ -115,6 +129,10 @@ window.addEventListener('DOMContentLoaded', () => {
     return imageUrlsLahore[randomIndex];
   }
 
+  function getRandomTestImage() {
+    const randomIndex = Math.floor(Math.random() * testArray.length);
+    return testArray[randomIndex];
+  }
 
   // Function to generate a random English caption
   function getRandomCaption() {
@@ -137,7 +155,7 @@ window.addEventListener('DOMContentLoaded', () => {
     gridItem.classList.add('grid-item');
     gridContainer.appendChild(gridItem);
 
-    if (i === 7 || i == 10 || i == 15) {
+    if (i === 7 || i === 10 || i === 15 || i === 20) {
       gridItem.style.backgroundImage = `url(${heartGif})`;
       gridItem.style.cursor = 'pointer';
       
@@ -146,6 +164,20 @@ window.addEventListener('DOMContentLoaded', () => {
         const caption = getRandomCaption();
         popoverImage.src = getRandomImageUrl(i);
         popoverCaption.textContent = caption;
+        popoverOverlay.style.display = 'flex';
+      });
+    }
+
+    // Experimental
+    if (i === 8) {
+      gridItem.style.backgroundImage = `url(${heartGif})`;
+      gridItem.style.cursor = 'pointer';
+      
+      // Show popover on grid item click
+      gridItem.addEventListener('click', () => {
+        const imageObj = getRandomTestImage();
+        popoverImage.src = imageObj.imageUrl;
+        popoverCaption.textContent = imageObj.caption;
         popoverOverlay.style.display = 'flex';
       });
     }
