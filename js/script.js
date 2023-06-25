@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const imageUrlsSeattle = [
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-1-needle.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-1-needle.jpg', 
         caption: 'First visit to space needle. The early days!'
       },
       {
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
         caption: 'Pike place market - a special day :)'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-3-coffee.heic', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/seattle-3-coffee.jpg', 
         caption: 'Bellevue coffee days'
       }      
   ];
@@ -33,15 +33,15 @@ window.addEventListener('DOMContentLoaded', () => {
         caption: 'Golden hour at sister cities park!'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-2-bday.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-2-bday.jpg', 
         caption: 'Celebrating bdays! September :)'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-3-funny-park.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-3-funny-park.jpg', 
         caption: 'Hehe funnny park'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-4-hassan-bday.heic', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-4-hassan-bday.jpg', 
         caption: 'May birthdays :)'
       },
       {
@@ -49,15 +49,15 @@ window.addEventListener('DOMContentLoaded', () => {
         caption: '...'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-6-dillworth.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-6-dillworth.jpg', 
         caption: 'Dilworth winter nights!'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-7-snowy-cap.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-7-snowy-cap.jpg', 
         caption: 'Snow cap!'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-8-theater-funny.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/philly-8-theater-funny.jpg', 
         caption: 'Alone in theater.'
       }
   ];
@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
         caption: 'Nikkah cute hands picture :)'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-1-spice-bazaar.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-1-spice-bazaar.jpg', 
         caption: 'Dining out - Spice Bazaar. Our first dinner after officially being nikkah-fied'
       },
       {
@@ -80,11 +80,11 @@ window.addEventListener('DOMContentLoaded', () => {
         caption: '5 star hotel. Nice movie nights. Great experience!'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-3-last-eid.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-3-last-eid.jpg', 
         caption: 'Eid 2022! First eid together.'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-4-roof-funny.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-4-roof-funny.jpg', 
         caption: 'Hehe'
       },
       {
@@ -96,30 +96,30 @@ window.addEventListener('DOMContentLoaded', () => {
         caption: 'Enroute islamabad!'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-7-isloo-2.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-7-isloo-2.jpg', 
         caption: 'Enjoying isloo'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-8-plane.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/lahore-8-plane.jpg', 
         caption: 'Flying into Lahore'
       }      
   ];
 
   const imageUrlsSpain = [
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-1-fountain.jpg.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-1-fountain.jpg.jpg', 
         caption: 'Beautiful reunion in Spain :)'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-2-beach.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-2-beach.jpg', 
         caption: 'Beach days'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-3-cute-2.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-3-cute-2.jpg', 
         caption: 'Spain cute 2'
       },
       {
-        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-4-wedding-stand.HEIC', 
+        imageUrl: 'https://jun28-23.s3.ap-south-1.amazonaws.com/pics/spain-4-wedding-stand.jpg', 
         caption: 'Couple photoshoot in Denia :)'
       },
       {
